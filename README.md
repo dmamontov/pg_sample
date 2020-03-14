@@ -151,3 +151,6 @@ __\-password=__*password*
 # SEE ALSO
 
 createdb(1), pg\_dump(1), psql(1)
+
+# TODO
+- Faker
