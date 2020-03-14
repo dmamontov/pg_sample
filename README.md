@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/dmamontov/pg_sample.svg?branch=master)](https://travis-ci.com/dmamontov/pg_sample)
+
 # NAME
 
 pg\_sample - extract a small, sample dataset from a larger PostgreSQL
