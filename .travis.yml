@@ -4,5 +4,7 @@ perl:
  - 5.26
 services: postgresql
 env: PGUSER=postgres
+before_install:
+ - chmod +x pg_sample
 install: cpanm --notest DBI DBD::Pg
 script: prove -v
