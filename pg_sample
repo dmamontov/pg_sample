@@ -610,7 +610,10 @@ foreach my $fk (@fks) {
   my $sample_fk_table = $sample_tables{ $fk_table };
   my $idx_name = $dbh->quote_identifier($opt{schema} . '_idx' . ++$idx);
   my $fk_cols = join ', ', map { $_->[0] } @pairs;
-  $dbh->do(qq{ CREATE INDEX $idx_name ON $sample_fk_table ($fk_cols) });
+
+  if ($sample_fk_table) {
+    $dbh->do(qq{ CREATE INDEX $idx_name ON $sample_fk_table ($fk_cols) });
+  }
 }
 
 # Keep inserting rows to satisfy any fk constraints until no more
